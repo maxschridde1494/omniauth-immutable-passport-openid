@@ -6,10 +6,10 @@ module OmniAuth
   module Immutable
     module Strategies
       # Main class for Immutable Passport OmniAuth strategy.
-      class PassportOpenId
+      class PassportOpenId # < OmniAuth::Strategies::OAuth2
         include OmniAuth::Strategy
 
-        option :name, 'passport_openid'
+        option :name, 'immutable_passport'
 
         uid do
           raw_info.uid
